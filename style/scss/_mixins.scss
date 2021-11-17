@@ -1,0 +1,17 @@
+@mixin borderRadius($value) {
+	/* Chrome Safari */
+	-webkit-border-radius: $value;
+	/* Mozilla */
+	-moz-border-radius: $value;
+	/* Navigateurs récent */
+	border-radius: $value;
+}
+
+@mixin boxShadow($value) {
+	/* Chrome Safari */
+	-webkit-box-shadow: $value;
+	/* Mozilla */
+	-moz-box-shadow: $value;
+	/* Navigateurs récent */
+	box-shadow: $value;
+}

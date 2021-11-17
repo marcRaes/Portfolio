@@ -1,0 +1,93 @@
+// Section Contact
+#contact {
+	.introSection {
+		color: #000;
+	}
+
+	#messageError {
+		color: red;
+		font-weight: 600;
+	}
+
+	article {
+		p:nth-child(2) {
+			text-align: center;
+		}
+
+		form {
+
+			#field {
+				@extend %displayFlex;
+				justify-content: space-around;
+				@extend %alignItemsCenter;
+				flex-wrap: wrap;
+			}
+
+			fieldset p.field {
+				background-color: rgba(0, 0, 0, 0.5);
+				margin: 30px 0;
+				padding: 10px;
+				@include borderRadius(5px);
+			}
+
+			fieldset p.fieldError {
+				background-color: red;
+			}
+
+			label {
+				display: none;
+			}
+
+			input:not([type=submit]) {
+				width: 330px;
+				height: 23px;
+				padding: 4px;
+				border: none;
+				border-bottom: 1px solid #f9f9f9;
+				background: none;
+				@include borderRadius(5px 5px 0 0);
+				color: #fff;
+				font-size: 1em;
+			}
+
+			input:focus, textarea:focus {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			textarea {
+				@extend input:not([type=submit]);
+				min-width: 90%;
+				min-height: 159px;
+				max-width: 550px;
+				max-height: 250px;
+				font-family: 'Lato', sans-serif;
+			}
+
+			input::placeholder, textarea::placeholder {
+				color: #fff;
+				text-transform: none;
+			}
+
+			#captcha {
+				@extend %displayFlex;
+				@extend %justifyContentCenter;
+				margin: 30px 0;
+			}
+
+			p#submit {
+				text-align: center;
+
+				input {
+					border: none;
+					background-color: #000;
+					padding: 15px 13px;
+					color: #fff;
+					font-weight: 400;
+					text-transform: uppercase;
+					@include borderRadius(5px);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

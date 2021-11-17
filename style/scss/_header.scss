@@ -1,0 +1,35 @@
+// Placeholder
+@import "placeholder";
+
+// HEADER
+header {
+	@extend %displayFlex;
+	justify-content: space-around;
+	@extend %alignItemsCenter;
+	height: $heightHeader;
+	background-color: $bgHeader;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+#navHeader {
+	ul {
+		@extend %displayFlex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		padding: 15px;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+	}
+}

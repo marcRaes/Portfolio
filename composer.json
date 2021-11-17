@@ -1,0 +1,20 @@
+{
+	"name": "cathleen18/composer",
+	"type": "project, composer-plugin",
+	"authors": [
+		{
+			"name": "raes marc",
+			"email": "contact@marcraes.fr"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Cathleen18\\": "src",
+		}
+	},
+	"require": {
+		"intervention/image": "^2.5",
+		"swiftmailer/swiftmailer": "^6.0",
+		"phpmailer/phpmailer": "^6.0"
+	}
+}

@@ -1,0 +1,48 @@
+// Section "Me concernant"
+#about {
+	@extend %displayFlex;
+	justify-content: space-around;
+	@extend %alignItemsCenter;
+	padding: 0 10%;
+
+	article {
+		width: 50%;
+		margin: 0 10px;
+	}
+
+	h1 {
+		@extend strong;
+		color: $colorAbout;
+		margin-bottom: 20px;
+	}
+
+	#introAbout {
+		p {
+			@extend %marginTop10;
+			font-size: 1.1em;
+		}
+	}
+
+	article:nth-child(2) {
+		width: 200px;
+	}
+
+	img {
+		width: 100%;
+		min-width: 100px;
+		border: 7px solid $colorAbout;
+		@include borderRadius(16px);
+		@include boxShadow(0 0 5px #ccc);
+	}
+
+	#personalInformation {
+		ul {
+			text-align: left;
+			margin-left: 30px;
+		}
+
+		li {
+			@extend %marginTop10;
+		}
+	}
+}

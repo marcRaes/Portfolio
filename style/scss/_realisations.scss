@@ -1,0 +1,69 @@
+// Section Réalisations
+#achievements {
+	article {
+		@extend %displayFlex;
+		@extend %justifyContentCenter;
+		@extend %flexWrap;
+		margin: auto;
+	}
+
+	.projects {
+		margin: 0 30px;
+
+		figure {
+			position: relative;
+			overflow: hidden;
+			z-index: 5;
+			width: 350px;
+			border: 10px solid #456369;
+			@include borderRadius(200px 90px);
+
+			a {
+				display: block;
+				
+				img {
+					width: 100%;
+					transition: all 1s linear;
+				}
+
+				figcaption {
+					position: absolute;
+					z-index: -1;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+
+					h2 {
+						padding: 16% 30px;
+						text-align: center;
+						color: #fff;
+						font-weight: 400;
+					}
+				}
+
+				&:hover img {
+			    	filter: grayscale(100%);
+				    -webkit-filter: grayscale(100%);
+				    -moz-filter: grayscale(100%);
+				    -ms-filter: grayscale(100%);
+				    -o-filter: grayscale(100%);
+			    }
+
+				&:hover figcaption {
+					z-index: 2;
+					transform: translateY(-100%);
+					transition: transform 1s linear;
+				}
+			}
+		}
+
+		.titleProject {
+			margin: 5px 0 0 0;
+			font:{
+				size: 1.3em;
+				weight: 400;
+			}
+			text-align: center;
+		}
+	}
+}

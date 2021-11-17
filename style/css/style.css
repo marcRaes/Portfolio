@@ -1,0 +1,695 @@
+@charset "UTF-8";
+/* Reset CSS */
+/* line 2, C:/Users/marc/Desktop/style/scss/_resetCss.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, #about h1, #skills .percentSkill h1, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, #stickyNav nav, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 23, C:/Users/marc/Desktop/style/scss/_resetCss.scss */
+article, aside, details, figcaption, figure,
+footer, header, #stickyNav nav, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 28, C:/Users/marc/Desktop/style/scss/_resetCss.scss */
+img {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 33, C:/Users/marc/Desktop/style/scss/_resetCss.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, C:/Users/marc/Desktop/style/scss/_resetCss.scss */
+strong, #about h1, #skills .percentSkill h1, .strong {
+  font-weight: 400;
+}
+
+/* Image du BODY */
+/* line 11, C:/Users/marc/Desktop/style/scss/style.scss */
+img.imgBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Préserve le ratio de l'image */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* HEADER + Menu Sticky */
+/* line 2, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+#about #introAbout p, #about #personalInformation li, #skills .knowledgeSkill:after {
+  margin-top: 10px;
+}
+
+/* line 7, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+#skills .percentSkill, #skills .skillBar {
+  height: 24px;
+  /* Chrome Safari */
+  -webkit-border-radius: 10px;
+  /* Mozilla */
+  -moz-border-radius: 10px;
+  /* Navigateurs récent */
+  border-radius: 10px;
+}
+
+/* line 19, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+header, #stickyNav nav, #navHeader ul, #stickyNav nav ul, #navProfessional ul, #home, #home article, #home #buttonContact, #about, #skills article, #achievements article, #contact article form #field, #contact article form #captcha {
+  display: flex;
+}
+
+/* line 23, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+#navProfessional ul, #home, #home #buttonContact, #skills article, #achievements article, #contact article form #captcha {
+  justify-content: center;
+}
+
+/* line 27, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+header, #stickyNav nav, #home, #home article, #about, #contact article form #field {
+  align-items: center;
+}
+
+/* line 31, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+#home article {
+  flex-direction: column;
+}
+
+/* line 35, C:/Users/marc/Desktop/style/scss/_placeholder.scss */
+#skills article, #achievements article {
+  flex-wrap: wrap;
+}
+
+/* line 5, C:/Users/marc/Desktop/style/scss/_header.scss */
+header, #stickyNav nav {
+  justify-content: space-around;
+  height: 50px;
+  background-color: #C22E30;
+}
+
+/* line 12, C:/Users/marc/Desktop/style/scss/_header.scss */
+header a, #stickyNav nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 20, C:/Users/marc/Desktop/style/scss/_header.scss */
+#navHeader ul, #stickyNav nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 26, C:/Users/marc/Desktop/style/scss/_header.scss */
+#navHeader a, #stickyNav nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+}
+
+/* line 31, C:/Users/marc/Desktop/style/scss/_header.scss */
+#navHeader a:hover, #stickyNav nav a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Sticky */
+/* line 2, C:/Users/marc/Desktop/style/scss/_menuSticky.scss */
+#stickyNav {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* Chrome Safari */
+  -webkit-box-shadow: 0 2px 3px #666;
+  /* Mozilla */
+  -moz-box-shadow: 0 2px 3px #666;
+  /* Navigateurs récent */
+  box-shadow: 0 2px 3px #666;
+}
+
+/* Menu profils */
+/* line 2, C:/Users/marc/Desktop/style/scss/_menuProfils.scss */
+#navProfessional {
+  background-color: #fff;
+  padding: 2px 0;
+  /* Chrome Safari */
+  -webkit-box-shadow: 0 2px 5px #666;
+  /* Mozilla */
+  -moz-box-shadow: 0 2px 5px #666;
+  /* Navigateurs récent */
+  box-shadow: 0 2px 5px #666;
+}
+
+/* line 12, C:/Users/marc/Desktop/style/scss/_menuProfils.scss */
+#navProfessional li {
+  padding: 3px;
+}
+
+/* line 16, C:/Users/marc/Desktop/style/scss/_menuProfils.scss */
+#navProfessional li + li {
+  margin-left: 5px;
+}
+
+/* line 20, C:/Users/marc/Desktop/style/scss/_menuProfils.scss */
+#navProfessional .fab {
+  color: #C22E30;
+  font-size: 1.8em;
+}
+
+/* Titres h1 */
+/* line 31, C:/Users/marc/Desktop/style/scss/style.scss */
+.titleSection {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+/* Sections */
+/* line 40, C:/Users/marc/Desktop/style/scss/style.scss */
+section {
+  padding: 30px;
+  min-height: 90vh;
+}
+
+/* line 45, C:/Users/marc/Desktop/style/scss/style.scss */
+.introSection {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 4% 0;
+  color: #202020;
+}
+
+/* Fond sur les sections paire */
+/* line 53, C:/Users/marc/Desktop/style/scss/style.scss */
+section:nth-child(even) {
+  background-color: #fff;
+}
+
+/* Fond sur les sections impaire */
+/* line 58, C:/Users/marc/Desktop/style/scss/style.scss */
+section:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Section "Accueil" */
+/* line 2, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home {
+  position: relative;
+}
+
+/* line 8, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home #sendMail {
+  position: absolute;
+  top: 10px;
+  width: 40%;
+  min-width: 300px;
+  padding: 5px;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  /* Chrome Safari */
+  -webkit-border-radius: 10px;
+  /* Mozilla */
+  -moz-border-radius: 10px;
+  /* Navigateurs récent */
+  border-radius: 10px;
+}
+
+/* line 26, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home h1 {
+  text-transform: uppercase;
+  font-size: 3.4em;
+}
+
+/* line 31, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home h2 {
+  width: 70%;
+  text-align: center;
+}
+
+/* line 34, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home h2 span {
+  font-weight: 400;
+}
+
+/* line 39, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home span {
+  color: #C22E30;
+}
+
+/* line 43, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home #buttonContact {
+  margin-top: 20px;
+}
+
+/* line 48, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home #buttonContact a {
+  /* Chrome Safari */
+  -webkit-border-radius: 3px;
+  /* Mozilla */
+  -moz-border-radius: 3px;
+  /* Navigateurs récent */
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 12px 10px;
+  box-shadow: 0 0 0 #C22E30;
+  background-color: #C22E30;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+/* line 60, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home #buttonContact a:hover {
+  box-shadow: 0 0 13px #800003;
+  transition: box-shadow 0.8s ease;
+}
+
+/* line 65, C:/Users/marc/Desktop/style/scss/_accueil.scss */
+#home #buttonContact span.fas {
+  color: #fff;
+  margin-right: 7px;
+}
+
+/* Section "Me concernant" */
+/* line 2, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about {
+  justify-content: space-around;
+  padding: 0 10%;
+}
+
+/* line 8, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about article {
+  width: 50%;
+  margin: 0 10px;
+}
+
+/* line 13, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about h1 {
+  color: #1ABC9C;
+  margin-bottom: 20px;
+}
+
+/* line 20, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about #introAbout p {
+  font-size: 1.1em;
+}
+
+/* line 26, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about article:nth-child(2) {
+  width: 200px;
+}
+
+/* line 30, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about img {
+  width: 100%;
+  min-width: 100px;
+  border: 7px solid #1ABC9C;
+  /* Chrome Safari */
+  -webkit-border-radius: 16px;
+  /* Mozilla */
+  -moz-border-radius: 16px;
+  /* Navigateurs récent */
+  border-radius: 16px;
+  /* Chrome Safari */
+  -webkit-box-shadow: 0 0 5px #ccc;
+  /* Mozilla */
+  -moz-box-shadow: 0 0 5px #ccc;
+  /* Navigateurs récent */
+  box-shadow: 0 0 5px #ccc;
+}
+
+#about span.email::after {
+  content: "contact@marcraes.fr";
+}
+
+/* line 39, C:/Users/marc/Desktop/style/scss/_meConcernant.scss */
+#about #personalInformation ul {
+  text-align: left;
+  margin-left: 30px;
+}
+
+/* Section Compétences */
+/* line 4, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills article {
+  margin: auto;
+  width: 80%;
+}
+
+/* line 12, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .blocSkill {
+  align-self: flex-end;
+  width: 300px;
+  margin: 40px 30px;
+}
+
+/* line 18, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .percentSkill {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* line 24, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .percentSkill h1 {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* line 34, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .skillBar {
+  position: absolute;
+  top: 0;
+  background-color: #1F43AC;
+}
+
+/* line 41, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .knowledgeSkill {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Chrome Safari */
+  -webkit-border-radius: 5px;
+  /* Mozilla */
+  -moz-border-radius: 5px;
+  /* Navigateurs récent */
+  border-radius: 5px;
+}
+
+/* line 47, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .knowledgeSkill p {
+  color: #fff;
+}
+
+/* line 51, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .knowledgeSkill ul {
+  margin: 20px 15px 10px;
+  border-top: 1px solid #fff;
+}
+
+/* line 56, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .knowledgeSkill li {
+  margin: 5px 0 0 0;
+  list-style: inside;
+  color: #fff;
+}
+
+/* line 62, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#skills .knowledgeSkill:after {
+  position: absolute;
+  content: "";
+  margin-left: 50px;
+  width: 0;
+  height: 0;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-top: 15px solid rgba(0, 0, 0, 0.4);
+}
+
+/* line 77, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#certificates {
+  list-style-type: disc;
+}
+
+/* line 79, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#certificates span {
+  font-weight: bold;
+}
+
+/* line 82, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#certificates li {
+  padding: 5px 0;
+}
+
+/* line 85, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#certificates a {
+  font-weight: 100;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 90, C:/Users/marc/Desktop/style/scss/_competences.scss */
+#certificates a:hover {
+  text-decoration: underline;
+}
+
+/* Section Réalisations */
+/* line 3, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements article {
+  margin: auto;
+}
+
+/* line 10, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects {
+  margin: 0 30px;
+}
+
+/* line 13, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  width: 350px;
+  border: 10px solid #456369;
+  /* Chrome Safari */
+  -webkit-border-radius: 200px 90px;
+  /* Mozilla */
+  -moz-border-radius: 200px 90px;
+  /* Navigateurs récent */
+  border-radius: 200px 90px;
+}
+
+/* line 21, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure a {
+  display: block;
+}
+
+/* line 24, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure a img {
+  width: 100%;
+  transition: all 1s linear;
+}
+
+/* line 29, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure a figcaption {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 36, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure a figcaption h2 {
+  padding: 16% 30px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* line 44, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure a:hover img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+}
+
+/* line 52, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects figure a:hover figcaption {
+  z-index: 2;
+  transform: translateY(-100%);
+  transition: transform 1s linear;
+}
+
+/* line 60, C:/Users/marc/Desktop/style/scss/_realisations.scss */
+#achievements .projects .titleProject {
+  margin: 5px 0 0 0;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Section Contact */
+/* line 3, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact .introSection {
+  color: #000;
+}
+
+/* line 7, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact #messageError {
+  color: red;
+  font-weight: 600;
+}
+
+/* line 13, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article p:nth-child(2) {
+  text-align: center;
+}
+
+/* line 19, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form #field {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* line 26, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form fieldset p.field {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+  padding: 10px;
+  /* Chrome Safari */
+  -webkit-border-radius: 5px;
+  /* Mozilla */
+  -moz-border-radius: 5px;
+  /* Navigateurs récent */
+  border-radius: 5px;
+}
+
+/* line 33, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form fieldset p.fieldError {
+  background-color: red;
+}
+
+/* line 37, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form label {
+  display: none;
+}
+
+/* line 41, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form input:not([type=submit]), #contact article form textarea {
+  width: 330px;
+  height: 23px;
+  padding: 4px;
+  border: none;
+  border-bottom: 1px solid #f9f9f9;
+  background: none;
+  /* Chrome Safari */
+  -webkit-border-radius: 5px 5px 0 0;
+  /* Mozilla */
+  -moz-border-radius: 5px 5px 0 0;
+  /* Navigateurs récent */
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 1em;
+}
+
+/* line 53, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form input:focus, #contact article form textarea:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 57, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form textarea {
+  min-width: 90%;
+  min-height: 159px;
+  max-width: 550px;
+  max-height: 250px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 66, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form input::placeholder, #contact article form textarea::placeholder {
+  color: #fff;
+  text-transform: none;
+}
+
+/* line 71, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form #captcha {
+  margin: 30px 0;
+}
+
+/* line 77, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form p#submit {
+  text-align: center;
+}
+
+/* line 80, C:/Users/marc/Desktop/style/scss/_contact.scss */
+#contact article form p#submit input {
+  border: none;
+  background-color: #000;
+  padding: 15px 13px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  /* Chrome Safari */
+  -webkit-border-radius: 5px;
+  /* Mozilla */
+  -moz-border-radius: 5px;
+  /* Navigateurs récent */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media screen and (max-width: 979px) {
+  /* line 4, C:/Users/marc/Desktop/style/scss/_tablettes.scss */
+  #home #buttonContact a {
+    margin: 0 5px;
+    padding: 12px 5px;
+  }
+  /* line 12, C:/Users/marc/Desktop/style/scss/_tablettes.scss */
+  #about {
+    flex-direction: column;
+  }
+  /* line 14, C:/Users/marc/Desktop/style/scss/_tablettes.scss */
+  #about article {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 2, C:/Users/marc/Desktop/style/scss/_mobiles.scss */
+  header, #stickyNav nav {
+    flex-direction: column;
+    height: 100%;
+    padding: 3px 0;
+  }
+  /* line 9, C:/Users/marc/Desktop/style/scss/_mobiles.scss */
+  #navHeader a, #stickyNav nav a {
+    padding: 5px;
+  }
+  /* line 16, C:/Users/marc/Desktop/style/scss/_mobiles.scss */
+  #home h1 {
+    font-size: 5vw;
+  }
+  /* line 20, C:/Users/marc/Desktop/style/scss/_mobiles.scss */
+  #home #buttonContact {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* line 24, C:/Users/marc/Desktop/style/scss/_mobiles.scss */
+  #home #buttonContact a {
+    width: 250px;
+    margin: 5px 0;
+  }
+}
+
+/*# sourceMappingURL=../css/style.map */

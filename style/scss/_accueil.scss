@@ -1,0 +1,64 @@
+// Section Accueil
+#home {
+	position: relative;
+	@extend %displayFlex;
+	@extend %justifyContentCenter;
+	@extend %alignItemsCenter;
+
+	#sendMail {
+		position: absolute;
+		top: 10px;
+		width: 40%;
+		min-width: 300px;
+		padding: 5px;
+		font-size: 1.2em;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		@include borderRadius(10px);
+	}
+
+	article {
+		@extend %displayFlex;
+		@extend %flexDirectionColumn;
+		@extend %alignItemsCenter;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 3.4em;
+	}
+
+	h2 {
+		width: 70%;
+		text-align: center;
+		span {
+			font-weight: 400;
+		}
+	}
+
+	span {
+		color: $bgHeader;
+	}
+
+	#buttonContact {
+		margin-top: 20px;
+		@extend %displayFlex;
+		@extend %justifyContentCenter;
+
+		a {
+			@include borderRadius(3px);
+			margin: 0 10px;
+			padding: 12px 10px;
+			background-color: $bgHeader;
+			text-decoration: none;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 1.2em;
+		}
+
+		span.fas {
+			color: #fff;
+			margin-right: 7px;
+		}
+	}
+}

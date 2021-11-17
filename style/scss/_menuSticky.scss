@@ -1,0 +1,19 @@
+// Menu Sticky
+#stickyNav {
+	display: none;
+	position: fixed;
+	left: 0; right: 0;
+	z-index: 1000;
+	@include boxShadow(0 2px 3px #666);
+
+	nav {
+		@extend header;
+		//height: 40px;
+
+		@extend #navHeader;
+
+		a {
+			//padding: 10.5px 15px;
+		}
+	}
+}

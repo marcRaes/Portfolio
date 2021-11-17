@@ -1,0 +1,81 @@
+// Variables
+@import "variables";
+
+// Mixins
+@import "mixins";
+
+/* Reset CSS */
+@import "resetCss";
+
+/* Image du BODY */
+img.imgBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* HEADER + Menu Sticky */
+@import "header";
+
+/* Menu Sticky */
+@import "menuSticky";
+
+/* Menu profils */
+@import "menuProfils";
+
+/* Titres h1 */
+.titleSection {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: 700;
+	margin-top: 30px;
+}
+
+/* Sections */
+section {
+	padding: 30px;
+	min-height: 90vh;
+}
+
+.introSection {
+	font-size: 1.4em;
+	text-align: center;
+	margin: 4% 0;
+	color: #202020;
+}
+
+/* Fond sur les sections paire */
+section:nth-child(even) {
+	background-color: #fff;
+}
+
+/* Fond sur les sections impaire */
+section:nth-child(odd) {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+/* Section "Accueil" */
+@import "accueil";
+
+/* Section "Me concernant" */
+@import "meConcernant";
+
+/* Section Compétences */
+@import "competences";
+
+/* Section Réalisations */
+@import "realisations";
+
+/* Section Contact */
+@import "contact";
+
+/* Media queries */
+@media screen and (max-width: 979px) {
+	@import "tablettes";
+}
+
+@media screen and (max-width: 767px) {
+	@import "mobiles";
+}

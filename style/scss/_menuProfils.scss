@@ -1,0 +1,24 @@
+// Menu profils
+#navProfessional {
+	background-color: #fff;
+	padding: 2px 0;
+	@include boxShadow(0 2px 5px #666);
+
+	ul {
+		@extend %displayFlex;
+		@extend %justifyContentCenter;
+	}
+
+	li {
+		padding: 3px;
+	}
+
+	li + li {
+		margin-left: 5px;
+	}
+
+	.fab {
+		color: $bgHeader;
+		font-size: 1.8em;
+	}
+}

@@ -1,0 +1,93 @@
+// Section "Compétences"
+#skills {
+
+	article {
+		@extend %displayFlex;
+		@extend %justifyContentCenter;
+		@extend %flexWrap;
+		margin: auto;
+		width: 80%;
+	}
+
+	.blocSkill {
+		align-self: flex-end;
+		width: 300px;
+		margin: 40px 30px;
+	}
+
+	.percentSkill {
+		@extend %skill;
+		position: relative;
+		width: 100%;
+		background-color: #fff;
+
+		h1 {
+			@extend strong;
+			position: absolute;
+			z-index: 1;
+			left: 20px;
+			font-size: 18px;
+			color: #fff;
+		}
+	}
+
+	.skillBar {
+		@extend %skill;
+		position: absolute;
+		top: 0;
+		background-color: #1F43AC;
+	}
+	
+	.knowledgeSkill {
+		margin-bottom: 20px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.4);
+		@include borderRadius(5px);
+
+		p {
+			color: #fff;
+		}
+
+		ul {
+			margin: 20px 15px 10px;
+			border-top: 1px solid #fff;
+		}
+
+		li {
+			margin: 5px 0 0 0;
+			list-style: inside;
+			color: #fff;
+		}
+
+		&:after {
+			@extend %marginTop10;
+			position: absolute;
+			content:"";
+			margin-left: 50px;
+			width: 0;
+			height: 0;
+			border-left: 7.5px solid transparent;
+			border-right: 7.5px solid transparent;
+			border-top: 15px solid rgba(0, 0, 0, 0.4);
+		}
+	}
+}
+
+// Section "Certifications"
+#certificates {
+	list-style-type: disc;
+	span {
+		font-weight: bold;
+	}
+	li {
+		padding: 5px 0;	
+	}
+	a {
+		font-weight: 100;
+		color: #000;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
