@@ -11,11 +11,14 @@ use Portfolio\{
     Compteur_visite
 };
 
-// Si le visiteur n'est pas un robot
-if(strpos($_SERVER['HTTP_USER_AGENT'], 'bot') === false) {
-    $compteurVisite = new Compteur_visite();
-    if (!$compteurVisite->dayVisitorCheck()) {
-        $compteurVisite->createEntry();
+// Si ce n'est pas le site de DEV
+if(substr($_SERVER['HTTP_HOST'], 0, 3) !== "dev") {
+    // Si le visiteur n'est pas un robot
+    if(strpos($_SERVER['HTTP_USER_AGENT'], 'bot') === false) {
+        $compteurVisite = new Compteur_visite();
+        if (!$compteurVisite->dayVisitorCheck()) {
+            $compteurVisite->createEntry();
+        }
     }
 }
 
@@ -26,7 +29,7 @@ $candidate = new Candidate(
         'surname'         => 'RAES',
         'birthDate'       => '21-11-1985',
         'email'           => 'images/email.png',
-        'address'         => '5 Allée henri le navigateur 38090 Villefontaine',
+        'address'         => '05 Allée henri le navigateur, 38090 Villefontaine',
         'telephoneNumber' => '+33767422616',
     ]
 );
@@ -36,8 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $controller = new Controller($_POST);
 }
 
-/* Vérifie si le formulaire à déja était envoyé
- * Permettra d'afficher les erreurs du formulaire */
+// Vérifie si le formulaire à déja était envoyé => Permettra d'afficher les erreurs du formulaire
 if (isset($_SESSION['form'])) {
     //Récupération du formulaire envoyer
     $form = unserialize($_SESSION['form']);

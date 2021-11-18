@@ -3,17 +3,19 @@ namespace Portfolio;
 
 class Manager
 {
+    private const FILENAME = '.config';
+
     protected $bdd;
-    // identifiants connexion WAMP
-    // Constante de connexion
-    const HOST_NAME = 'db5001971455.hosting-data.io';
-    const DATABASE = 'dbs1610202';
-    const USER_NAME = 'dbu1014274';
-    const PASSWORD = 'Distract8-Harmonics-Harbor';
 
     public function __construct()
     {
+        // Ouverture du fichier contenant les infos de connexion
+        $ressource = fopen(self::FILENAME, 'rb');
         // Connexion à la BDD
-        return $this->bdd = new \PDO('mysql:host='.self::HOST_NAME.';dbname='.self::DATABASE.'; charset=utf8', self::USER_NAME, self::PASSWORD);
+        $this->bdd = new \PDO(trim(fgets($ressource)), trim(fgets($ressource)), trim(fgets($ressource)));
+        // Fermeture du fichier
+        fclose($ressource);
+
+        return $this->bdd;
     }
 }
